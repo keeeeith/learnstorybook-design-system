@@ -5,6 +5,10 @@ import { Avatar } from "./Avatar";
 export default {
   title: "Design System/Avatar",
   component: Avatar,
+  parameters: {
+    componentSubtitle:
+      "Displays an image that represents a user or organization.",
+  },
 };
 
 export const Standard = (args) => <Avatar {...args} />;
@@ -74,5 +78,11 @@ Controls.argTypes = {
   size: {
     options: ["tiny", "small", "medium", "large"],
     control: { type: "radio" },
+  },
+};
+Sizes.parameters = {
+  docs: {
+    // The story now contains a description
+    storyDescription: "4 sizes are supported.",
   },
 };
